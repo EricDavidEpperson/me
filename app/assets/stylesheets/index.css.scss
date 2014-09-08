@@ -3,10 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #welcome {
-  margin: 0px;
   float: right;
   width: 20%;
   color: #512888;
   h1 {font-size: 3.5rem;}
   h2 {font-size: 2rem;}
+}
+
+#construction {
+  text-align: center;
+  color: #c0392b;
+  h1 {font-size: 4.5rem;}
+  h2 {font-size: 3rem;}
 }
