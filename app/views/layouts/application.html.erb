@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eric Epperson - My little piece of the Internet.</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+
+  <script type="text/javascript" src="/vegas/jquery.vegas.js"></script>
+  <link rel="stylesheet" type="text/css" href="/vegas/jquery.vegas.css" />
+
+  <%= csrf_meta_tags %>
+
+  <script>
+    $.vegas('slideshow', {
+      delay:5000,
+      backgrounds:[
+          { src:'http://s25.postimg.org/vg1qmfub3/Img01.png', fade:1000 },
+          { src:'http://s25.postimg.org/oup0moegf/DSCN2301.jpg', fade:1000 },
+          { src:'http://s25.postimg.org/vzsf6aptb/IMG_0644.jpg', fade:1000 },
+          { src:'http://s25.postimg.org/3qqqw39kf/IMG_1051a.png', fade:1000 }
+        ]
+      })('overlay', {
+        src:'/vegas/overlays/11.png'
+      });
+  </script>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
