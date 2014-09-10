@@ -9,7 +9,7 @@
   font-family: 'Pontano', sans-serif;
   text-shadow: 1px 1px #bdc3c7;
   h1 {font-size: 3.5rem;}
-  h2 {font-size: 2rem;
+  h2 {font-size: 2.5rem;
     a:link {color:#512888;text-decoration:none;}
     a:visited {color:#512888;text-decoration:none;}
     a:hover {text-decoration:underline;}
@@ -23,4 +23,62 @@
   color: #c0392b;
   h1 {font-size: 4.5rem;}
   h2 {font-size: 3rem;}
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 80%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    padding: 1rem;
+}
+
+#about {
+  padding: 5px;
+  display: none;
+  background-color: #2c3e50;
+  font-family: 'Pontano', sans-serif;
+  color: #bdc3c7;
+  h1{text-align:center;
+     color: #16a085;
+     text-shadow: 1px 1px #000000;
+  }
+  h3{text-align:center;
+     a:link {color:#c0392b;}
+     a:visited {color:#c0392b;}
+     a:hover {text-decoration:none;}
+  }
+}
+
+#projects {
+  display: none;
+  background-color: #2c3e50;
+  font-family: 'Pontano', sans-serif;
+  text-align: center;
+  color: #2980b9;
+  h1{text-align:center;
+     color: #16a085;
+     text-shadow: 1px 1px #000000;
+  }
+  h3{text-align:center;
+     a:link {color:#c0392b;}
+     a:visited {color:#c0392b;}
+     a:hover {text-decoration:none;}
+  }
+  p{color: #d35400;
+    a:link {color:#c0392b;}
+    a:visited {color:#c0392b;}
+    a:hover {text-decoration:none;}
+  }
 }
