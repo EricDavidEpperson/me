@@ -3,15 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #welcome {
+  width: 20vw;
   float: right;
-  width: 20%;
   color: #512888;
+  font-family: 'Pontano', sans-serif;
+  text-shadow: 1px 1px #bdc3c7;
   h1 {font-size: 3.5rem;}
-  h2 {font-size: 2rem;}
+  h2 {font-size: 2rem;
+    a:link {color:#512888;text-decoration:none;}
+    a:visited {color:#512888;text-decoration:none;}
+    a:hover {text-decoration:underline;}
+  }
 }
 
 #construction {
   text-align: center;
+  font-family: 'Pontano', sans-serif;
+  text-shadow: 2px 2px #2c3e50;
   color: #c0392b;
   h1 {font-size: 4.5rem;}
   h2 {font-size: 3rem;}
