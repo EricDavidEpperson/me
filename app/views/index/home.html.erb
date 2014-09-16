@@ -19,16 +19,16 @@
   <h2>
     <a href="javascript:showDiv('about');">About Me</a>
     <br><a href="construction.html">My Blog</a></br>
-    <a href="http://www.linkedin.com/pub/eric-epperson/2a/973/364/">My LinkedIn</a>
+    <a href="http://www.linkedin.com/pub/eric-epperson/2a/973/364/" target="_blank">My LinkedIn</a>
     <br><a href="javascript:showDiv('projects');">My Projects</a></br>
-    <a href="https://github.com/EricDavidEpperson">My Github</a>
+    <a href="javascript:showDiv('githubs')">My Github</a>
   </h2>
 </div>
 
 <div class="outer">
 <div class="middle">
 <div class="inner">
-  <div id="about">
+  <div id="about" class="info">
     <h1>Who is Eric D. Epperson?</h1>
     <p>I grew up in the U.S. midwest during the rapidly
       changing 1980's and 1990's. It was a time when digital technology would
@@ -57,12 +57,19 @@
     <h3><a href="javascript:hideDiv('about');">Close</a></h3>
   </div>
 
-  <div id="projects">
+  <div id="projects" class="info">
     <h1>My Projects</h1>
     <h2>Check back here often to see what I've been working on!</h2>
-    <p><a href="http://chartography.herokuapp.com/">Chartography</a>
+    <p><a href="http://chartography.herokuapp.com/" target="_blank">Chartography</a>
       A web app for finding concerts worldwide</p>
     <h3><a href="javascript:hideDiv('projects');">Close</a></h3>
+  </div>
+
+  <div id="githubs" class="info">
+    <h1>My Githubs</h1>
+    <p><a href="https://github.com/EricDavidEpperson" target="_blank">Professional Github</a></p>
+    <p><a href="https://github.com/scarecrow182000" target="_blank">Ironyard Academy Github</a></p>
+    <h3><a href="javascript:hideDiv('githubs');">Close</a></h3>
   </div>
 
 </div>
