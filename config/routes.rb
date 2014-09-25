@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
 
-  root to: 'index#home'
+  root to: 'home#index'
   # resources :blog
-  get '/construction', to:'index#construction'
+  get '/construction', to:'home#construction'
 
 end
-
-
-# get '/patients/:id', to: 'patients#show', as: 'patient'
