@@ -1,0 +1,9 @@
+Blog Home
+
+<% @posts.each do |post| %>
+  <div class="post">
+    <h3><%= link_to "post.title", post %></h3>
+    <small><%= post.created_at %></small>
+    <p><%= post.body.html_safe %></p>
+  </div>
+<% end %>

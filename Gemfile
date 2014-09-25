@@ -43,3 +43,6 @@ gem 'pry', group: [:development, :test]
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'devise'
+gem 'simple_form','3.1.0.rc2'

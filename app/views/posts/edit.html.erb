@@ -1,0 +1,4 @@
+<div>
+  <h1>Editing: <%= @post.title %> <small><%= link_to "Delete", posts_path(@post), method: :delete, "data-confirm"=>"Are you sure?" %></small></h1>
+</div>
+<%= render partial: "form" %>
