@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
-  # get 'posts/index'
   resources :posts
 
   get '/construction', to:'home#construction'
