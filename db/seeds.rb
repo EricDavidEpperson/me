@@ -3,4 +3,4 @@ Post.destroy_all
 
 User.destroy_all
 
-# User.create! email: ENV["email"], password: ENV["password"], password_confirmation: ENV["password"]
+User.create! email: "ericdavidepperson@gmail.com", password: "StlCards06!", password_confirmation: "StlCards06!"
