@@ -1,8 +1,13 @@
-Blog Home
+<div class="banner">
+  <h1>Eric D.<br>Epperson</h1>
+</div>
+
+<div class="headshot">
+</div>
 
 <% @posts.each do |post| %>
   <div class="post">
-    <h3><%= link_to "post.title", post %></h3>
+    <h3><%= link_to post.title, post %></h3>
     <small><%= post.created_at %></small>
     <p><%= post.body.html_safe %></p>
   </div>

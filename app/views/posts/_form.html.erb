@@ -1,7 +1,19 @@
-Form for posts
+<head>
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-<%= simple_form_for @post do |f| %>
-  <%= f.input :title %>
-  <%= f.input :body, as: :text %>
-  <%= f.submit class: "btn btn-primary"%>
-<% end %>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+Form for posts
+<div class="container">
+  <%= simple_form_for @post do |f| %>
+    <%= f.input :title %>
+    <%= f.input :body, as: :text %>
+    <%= f.submit class: "btn btn-primary"%>
+  <% end %>
+</div>
