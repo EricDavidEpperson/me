@@ -1,29 +1,27 @@
 <style>
-.headshot {
-  margin: 50px;
-  float: left;
+#banner {margin-bottom: 15px;}
+#headshot {
+  margin-right: -300px;
+  margin-left: 50px;
 }
-
-#banner {margin-bottom: 1rem;}
 </style>
 
 <div>
   <img src="http://s25.postimg.org/3s0esa8fj/blog_banner_earth_panorama.jpg" class="img-responsive" id="banner">
 </div>
 
-<div class="headshot">
+<div class= "col-md-2" id="headshot">
   <img src="http://s25.postimg.org/ci236vfan/IMG_1207.jpg" alt="Headshot" class="img-circle">
 </div>
 
-<% @posts.each do |post| %>
-<div class="col-md-6">
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <h3><%= link_to post.title, post %></h3>
-      <small><%= post.created_at %></small>
-      <p><%= post.body.html_safe %></p>
+<% @posts.order('created_at').each do |post| %>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h3><%= link_to post.title, post %></h3>
+        <small><%= post.created_at %></small>
+        <p><%= post.body.html_safe %></p>
+      </div>
     </div>
   </div>
-</div>
-
 <% end %>
