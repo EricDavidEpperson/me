@@ -3,10 +3,12 @@
   margin: 50px;
   float: left;
 }
+
+#banner {margin-bottom: 1rem;}
 </style>
 
 <div>
-  <img src="http://s25.postimg.org/3s0esa8fj/blog_banner_earth_panorama.jpg" class="img-responsive">
+  <img src="http://s25.postimg.org/3s0esa8fj/blog_banner_earth_panorama.jpg" class="img-responsive" id="banner">
 </div>
 
 <div class="headshot">
@@ -14,9 +16,14 @@
 </div>
 
 <% @posts.each do |post| %>
-  <div class="col-md-6">
-    <h3><%= link_to post.title, post %></h3>
-    <small><%= post.created_at %></small>
-    <p><%= post.body.html_safe %></p>
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3><%= link_to post.title, post %></h3>
+      <small><%= post.created_at %></small>
+      <p><%= post.body.html_safe %></p>
+    </div>
   </div>
+</div>
+
 <% end %>

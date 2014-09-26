@@ -1,7 +1,10 @@
-<h1>Blog#show</h1>
 
-<div class="post">
-  <h1><%= @post.title %></h1>
-  <small><%= @post.created_at %></small>
-  <p><%= @post.body.html_safe %></p>
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h1><%= @post.title %></h1>
+      <small><%= @post.created_at %></small>
+      <p><%= @post.body.html_safe %></p>
+    </div>
+  </div>
 </div>
