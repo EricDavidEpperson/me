@@ -9,16 +9,23 @@
       ]
     });
 
-  function showDiv(divId) {$("#"+divId).show();}
   function hideDiv(divId) {$("#"+divId).hide();}
+  function showDiv(divId) {$("#"+divId).show();}
+  function toggleDiv(cl){
+     var els = document.getElementsByClassName(cl);
+     for(var i=0; i<els.length; ++i){
+        var s = els[i].style;
+        s.display = s.display==='none' ? 'block' : 'none';
+     };
+}
 </script>
 
 <div id="welcome">
   <h2>
-    <a href="javascript:showDiv('about');">About Me</a>
+    <a href="javascript:showDiv('about'); javascript:hideDiv('githubs'); javascript:hideDiv('projects');">About Me</a>
     <br><%= link_to "Blog", posts_path %></br>
-    <a href="javascript:showDiv('githubs')">Github</a>
-    <a href="javascript:showDiv('projects');">Projects</a>
+    <a href="javascript:showDiv('githubs');javascript:hideDiv('about'); javascript:hideDiv('projects');">Github</a>
+    <a href="javascript:showDiv('projects'); javascript:hideDiv('githubs'); javascript:hideDiv('about');">Projects</a>
     <a href="http://www.linkedin.com/pub/eric-epperson/2a/973/364/" target="_blank">LinkedIn</a>
   </h2>
 </div>
@@ -71,3 +78,5 @@
 </div>
 </div>
 </div>
+
+<!--  -->
