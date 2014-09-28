@@ -1,11 +1,12 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .notice {display: none;}
 
 #welcome {
+  float:right;
   width: 20vw;
-  float: right;
   color: #512888;
   font-family: 'Pontano', sans-serif;
   text-shadow: 1px 1px #bdc3c7;
@@ -27,10 +28,10 @@
 }
 
 .outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 80%;
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 80%;
 }
 
 .middle {
@@ -74,4 +75,25 @@
     font-size: 1.25rem;
     a:hover {text-decoration:none;}
   }
+}
+
+#contact {
+  text-align: center;
+  p{color: #d35400;
+    font-size: 1.25rem;
+    a:hover {text-decoration:none;}
+  }
+}
+
+#close {
+    display: block;
+    float: right;
+    position: relative;
+    width:30px;
+    height:30px;
+    margin-top: -25px;
+    margin-right: -25px;
+    background: url(https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/close-circle-512.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }

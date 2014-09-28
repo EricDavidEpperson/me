@@ -11,51 +11,54 @@
 
   function hideDiv(divId) {$("#"+divId).hide();}
   function showDiv(divId) {$("#"+divId).show();}
-
 </script>
 
-<div id="welcome">
-  <h2>
-    <a href="javascript:showDiv('about'); javascript:hideDiv('githubs'); javascript:hideDiv('projects');">About Me</a>
-    <br><%= link_to "Blog", posts_path %></br>
-    <a href="javascript:showDiv('githubs');javascript:hideDiv('about'); javascript:hideDiv('projects');">Github</a>
-    <a href="javascript:showDiv('projects'); javascript:hideDiv('githubs'); javascript:hideDiv('about');">Projects</a>
-    <a href="http://www.linkedin.com/pub/eric-epperson/2a/973/364/" target="_blank">LinkedIn</a>
-  </h2>
-</div>
+<body>
 
-<div class="outer">
-<div class="middle">
-<div class="inner">
-  <div id="about" class="info">
-    <h1>Who is Eric D. Epperson?</h1>
-    <p>First thing you should know about me: I have spent the past 15 years of my
-      life working as a cook/chef/restrauranteer. It's a great lifestyle for
-      someone young and in college or not ready for college. It's Not so great as you
-      become a little more mature (and I do mean a little).</p>
-    <p>That's why I took the Ruby on Rails Engineering course at The Iron Yard
-      Academy. I've always loved using computers and technology and it was finally
-      time for me to indulge this first passion of my life.</p>
-    <p>So if needing to bring on a passionate Software/Web Developer with
-      practical business experience, please feel free to contact me.</p>
-    <h3><a href="javascript:hideDiv('about');">Close</a></h3>
+  <div id="welcome">
+    <h2>
+      <a href="javascript:showDiv('about');
+        javascript:hideDiv('githubs'); javascript:hideDiv('projects');javascript:hideDiv('contact')">About Me</a>
+      <br><%= link_to "Blog", posts_path %></br>
+      <a href="javascript:showDiv('githubs');
+        javascript:hideDiv('about'); javascript:hideDiv('projects');javascript:hideDiv('contact')">Github</a>
+      <a href="javascript:showDiv('projects');
+        javascript:hideDiv('githubs'); javascript:hideDiv('about');javascript:hideDiv('contact')">Projects</a>
+      <a href="http://www.linkedin.com/pub/eric-epperson/2a/973/364/" target="_blank">LinkedIn</a>
+      <a href="javascript:showDiv('contact');
+        javascript:hideDiv('githubs'); javascript:hideDiv('about');javascript:hideDiv('projects')">Contact Me</a>
+    </h2>
   </div>
 
-  <div id="projects" class="info">
-    <h1>My Projects</h1>
-    <h2>Check back here often to see what I've been working on!</h2>
-    <p><a href="http://chartography.herokuapp.com/" target="_blank">Chartography</a>
-      A web app for finding concerts worldwide</p>
-    <h3><a href="javascript:hideDiv('projects');">Close</a></h3>
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+
+        <div id="about" class="info">
+          <a href="javascript:hideDiv('about');" id="close"></a>
+          <%= render partial: 'about'%>
+        </div>
+
+        <div id="projects" class="info">
+          <a href="javascript:hideDiv('projects');" id="close"></a>
+          <h1>My Projects</h1>
+          <%= render partial: 'projects'%>
+        </div>
+
+        <div id="githubs" class="info">
+          <a href="javascript:hideDiv('githubs');" id="close"></a>
+          <%= render partial: 'githubs'%>
+        </div>
+
+        <div id="contact" class="info">
+          <a href="javascript:hideDiv('contact');" id="close"></a>
+          <p>Eric D. Epperson</p>
+          <p>913.206.5949</p>
+          <a href="mailto:ericdavidepperson@gmail.com">ericdavidepperson@gmail.com</a>
+        </div>
+
+      </div>
+    </div>
   </div>
 
-  <div id="githubs" class="info">
-    <h1>My Githubs</h1>
-    <p><a href="https://github.com/EricDavidEpperson" target="_blank">Professional Github</a></p>
-    <p><a href="https://github.com/scarecrow182000" target="_blank">Ironyard Academy Github</a></p>
-    <h3><a href="javascript:hideDiv('githubs');">Close</a></h3>
-  </div>
-
-</div>
-</div>
-</div>
+</body>
