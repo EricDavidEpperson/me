@@ -1,4 +1,9 @@
 <style>
+@media (max-width: 500px){
+#banner {display:none;}
+#headshot {text-align:center;}
+}
+
 #banner {margin-bottom: 15px;}
 #headshot {
   margin-right: -300px;
@@ -11,7 +16,8 @@
 </div>
 
 <div class= "col-md-2" id="headshot">
-  <img src="http://s25.postimg.org/ci236vfan/IMG_1207.jpg" alt="Headshot" class="img-circle">
+  <a href="/">
+    <img src="http://s25.postimg.org/ci236vfan/IMG_1207.jpg" alt="Headshot" class="img-circle"></a>
 </div>
 
 <% @posts.order('created_at').each do |post| %>
