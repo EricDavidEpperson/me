@@ -1,0 +1,8 @@
+<%= simple_form_for @project do |f| %>
+  <%= f.input :title %>
+  <%= f.input :about, as: :text %>
+  <%= f.input :technologies %>
+  <%= f.input :screen_shot %>
+  <%= f.input :url %>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>

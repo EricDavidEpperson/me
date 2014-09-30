@@ -2,10 +2,12 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root to: 'home#index'
+  root to: 'projects#index'
+
+  resources :projects
 
   resources :posts
 
-  get '/construction', to:'home#construction'
+  get '/construction', to:'projects#construction'
 
 end
