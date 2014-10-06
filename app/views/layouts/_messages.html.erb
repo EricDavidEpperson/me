@@ -1,0 +1,14 @@
+<script>
+  function hideDiv(divId) {$("#"+divId).hide();}
+</script>
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>" id="alert">
+    <a href="javascript:hideDiv('alert');" data-dismiss="alert" class="close">×</a>
+      <ul>
+        <li>
+          <%= value %>
+        </li>
+      </ul>
+  </div>
+<% end %>

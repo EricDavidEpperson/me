@@ -47,3 +47,4 @@ end
 gem 'devise'
 gem 'simple_form','3.1.0.rc2'
 gem 'kaminari-bootstrap', '~> 3.0.1'#for pagination goodness
+gem 'kaminari'
