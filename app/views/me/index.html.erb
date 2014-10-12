@@ -1,0 +1,102 @@
+
+<script>
+  $.vegas('slideshow', {
+    delay:5000,
+    backgrounds:[
+      { src:'http://s25.postimg.org/vg1qmfub3/Img01.png', fade:1000 },
+      { src:'http://s25.postimg.org/oup0moegf/DSCN2301.jpg', fade:1000 },
+      { src:'http://s25.postimg.org/vzsf6aptb/IMG_0644.jpg', fade:1000 },
+      { src:'http://s25.postimg.org/3qqqw39kf/IMG_1051a.png', fade:1000 }
+    ]
+  });
+
+  function hideDiv(divId) {$("#"+divId).hide();}
+  function showDiv(divId) {$("#"+divId).show();}
+
+  $(document).ready(function () {
+    $("div").scroll(function () {
+      var $this = $(this);
+      var height = this.scrollHeight - $this.height(); // Get the height of the div
+      var scroll = $this.scrollTop(); // Get the vertical scroll position
+
+      var isScrolledToEnd = (scroll >= height);
+
+      if (isScrolledToEnd) {
+        hideDiv('down_arrow');
+      }
+    });
+  });
+</script>
+
+<body>
+
+  <div id="welcome">
+    <h2>
+      <a href="javascript:showDiv('about');
+        javascript:hideDiv('githubs'); javascript:hideDiv('projects');javascript:hideDiv('contact')">About Me</a>
+      <br><%= link_to "Blog", posts_path %></br>
+      <a href="javascript:showDiv('githubs');
+        javascript:hideDiv('about'); javascript:hideDiv('projects');javascript:hideDiv('contact')">Github</a>
+      <a href="javascript:showDiv('projects');
+        javascript:hideDiv('githubs'); javascript:hideDiv('about');javascript:hideDiv('contact')">Projects</a>
+      <a href="http://www.linkedin.com/pub/eric-epperson/2a/973/364/" target="_blank">LinkedIn</a>
+      <a href="javascript:showDiv('contact');
+        javascript:hideDiv('githubs'); javascript:hideDiv('about');javascript:hideDiv('projects')">Contact Me</a>
+    </h2>
+  </div>
+
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div id="contact" class="info">
+          <a href="javascript:hideDiv('contact');" id="close"></a>
+          <h1>Eric D. Epperson</h1>
+          <h3>913.206.5949</h3>
+          <a href="mailto:ericdavidepperson@gmail.com">ericdavidepperson@gmail.com</a>
+        </div>
+
+        <div id="about" class="info">
+          <a href="javascript:hideDiv('about');" id="close"></a>
+          <%= render partial: 'about'%>
+        </div>
+
+        <div id="projects" class="info">
+          <a href="javascript:hideDiv('projects');" id="close_projects"></a>
+          <div style="overflow: scroll;height: 25rem;" id="overflow">
+            <h1>My Projects</h1>
+            <h4>Check back here often to see what I am working on.</h4>
+            <% @projects.each do |project| %>
+              <div class="project">
+                <div class="screen_shot">
+                  <a href="<%= project.url %>" target="blank">
+                    <img src="<%= project.screen_shot %>"</a>
+                </div>
+                <a href="<%= project.url %>" target="blank"><h1><%= project.title %></h1></a>
+                <p><%= project.about %></p>
+                <h5>Technologies Used: <%= project.technologies %></h5>
+                <% if user_signed_in? %>
+                  <p><%= link_to "Edit", edit_project_path(project) %> |
+                    <%= link_to "Delete", project_path(project), method: :delete, "data-confirm"=>"Are you sure?" %></p>
+                <% end %>
+              </div>
+            <%end%>
+          </div>
+          <div id="down_arrow"><img src="http://s25.postimg.org/kxoy3o10r/gray_arrow_30_x_19.png"></div>
+        </div>
+
+        <div id="githubs" class="info">
+          <a href="javascript:hideDiv('githubs');" id="close"></a>
+          <h1>My Githubs</h1>
+          <p><a href="https://github.com/EricDavidEpperson" target="_blank">Professional Github</a></p>
+          <p><a href="https://github.com/scarecrow182000" target="_blank">Ironyard Academy Github</a></p>
+        </div>
+
+        <div id="footer">
+          <!-- Copyright (c) 2014 -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>

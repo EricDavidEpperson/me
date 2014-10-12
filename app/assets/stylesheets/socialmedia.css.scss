@@ -1,0 +1,19 @@
+
+
+#socialmedia {
+  padding-left:1.8em;
+  ul li{
+  display:inline;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  text-decoration: none;
+  margin-right: 2em;
+  img {
+    opacity: .6;
+    &:hover {
+      opacity: 1;
+      }
+    }
+  }
+}
