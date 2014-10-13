@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery-1.4.4.min.js
 //= require jquery.vegas.js
+//= require jquery.reveal.js
+//= require_tree .

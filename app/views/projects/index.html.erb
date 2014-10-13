@@ -1,3 +1,12 @@
+<head>
+  <style>
+    body {
+      margin:0px;
+      background-image: url('http://s25.postimg.org/e4e5sei3z/Arch_with_lens_flare.jpg');
+      background-image: no-repeat;
+    }
+  </style>
+</head>
 
 <header class="centered-navigation">
   <div class="centered-navigation-wrapper">
@@ -8,8 +17,8 @@
     <a href="" class="centered-navigation-menu-button">MENU</a>
 
     <ul class="centered-navigation-menu">
-      <li class="nav-link"><a href="javascript:void(0)">About Me</a></li>
-      <li class="nav-link"><a href="javascript:void(0)">Projects</a></li>
+      <li class="nav-link"><a href="#" data-reveal-id="myModal">About Me</a></li>
+      <li class="nav-link"><a href="construction.html">Projects</a></li>
       <li class="nav-link"><%= link_to "Blog", posts_path, :target => "_blank" %></li>
     </ul>
   </div>
@@ -47,7 +56,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="tooltip">
+            <a href="https://github.com/EricDavidEpperson" class="tooltip" target="blank">
             <%= image_tag('github_alt.png')%>
             <span>
               <%= image_tag('callout.gif', class:"callout")%>
@@ -56,11 +65,11 @@
             </a>
           </li>
           <li>
-            <a href="#" class="tooltip">
+            <a href="https://github.com/scarecrow182000" class="tooltip" target="blank">
             <%= image_tag('github_alt.png')%>
             <span>
               <%= image_tag('callout.gif', class:"callout")%>
-              <strong>Iron Yard Academy Github</storng>
+              <strong>Iron Yard Academy Github</strong>
             </span>
             </a>
           </li>
@@ -68,4 +77,18 @@
       </div>
     </div>
 	</div>
+</div>
+
+<div id="myModal" class="reveal-modal">
+   <h1>Who is Eric D. Epperson?</h1>
+   <p>First thing you should know about me: I have spent the past 15 years of my
+     life working as a cook/chef/restrauranteer. It's a great lifestyle for
+     someone young and in college or not ready for college. It's Not so great as you
+     become a little more mature (and I do mean a little).</p>
+   <p>That's why I took the Ruby on Rails Engineering course at The Iron Yard
+     Academy. I've always loved using computers and technology and it was finally
+     time for me to indulge my first passion in life.</p>
+   <p>So if you're needing to bring on a passionate Software/Web Developer with
+     practical business experience, please contact me.</p>
+   <a class="close-reveal-modal">&#215;</a>
 </div>

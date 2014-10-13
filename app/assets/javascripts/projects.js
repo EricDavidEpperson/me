@@ -2,7 +2,6 @@
 $(document).ready(function() {
   var menu = $('.centered-navigation-menu');
   var menuToggle = $('.centered-navigation-menu-button');
-  var signUp = $('.sign-up');
 
   $(menuToggle).on('click', function(e) {
     e.preventDefault();

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  get '/construction', to:'projects#construction'
+  get '/construction', to:'me#construction'
   get 'me/index'
 
 end
