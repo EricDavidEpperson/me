@@ -14,11 +14,11 @@
     <a href="javascript:void(0)" class="mobile-logo">
       <img src="https://cdn3.iconfinder.com/data/icons/pictofoundry-pro-vector-set/512/Diamond-128.png" alt="Logo image">
     </a>
-    <a href="" class="centered-navigation-menu-button">MENU</a>
+    <a href="javascript:void(0)" class="centered-navigation-menu-button">MENU</a>
 
     <ul class="centered-navigation-menu">
       <li class="nav-link"><a href="#" data-reveal-id="myModal">About Me</a></li>
-      <li class="nav-link"><a href="">Projects</a></li>
+      <li class="nav-link"><a href="javascript:showDiv('projects-wrapper');javascript:showDiv('close-projects')">Projects</a></li>
       <li class="nav-link"><%= link_to "Blog", posts_path, :target => "_blank" %></li>
     </ul>
   </div>
@@ -73,7 +73,12 @@
             </span>
             </a>
           </li>
-        </ul>
+        </ul><br/>
+        <div id="close-projects">
+          <a href="javascript:hideDiv('projects-wrapper');javascript:hideDiv('close-projects')">
+            <h1>Close Projects</h1>
+          </a>
+        </div>
       </div>
     </div>
 	</div>
@@ -93,9 +98,8 @@
    <a class="close-reveal-modal">&#215;</a>
 </div>
 
-<div class="projects wrapper">
+<div id="projects-wrapper">
   <div class="cards">
-
     <div class="card">
       <a href="http://epperson-books.herokuapp.com/" target="blank">
         <div class="hover-tile-outer" style="background: url('http://s25.postimg.org/8bwwpss33/Books_Manager_Screen_Shot.png');">
@@ -149,3 +153,7 @@
 
   </div>
 </div>
+<script>
+  function hideDiv(divId) {$("#"+divId).hide();}
+  function showDiv(divId) {$("#"+divId).show();}
+</script>
