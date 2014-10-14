@@ -20,6 +20,7 @@
       <li class="nav-link"><a href="#" data-reveal-id="myModal">About Me</a></li>
       <li class="nav-link"><a href="javascript:showDiv('projects-wrapper');javascript:showDiv('close-projects')">Projects</a></li>
       <li class="nav-link"><%= link_to "Blog", posts_path, :target => "_blank" %></li>
+      <li class="nav-link"><a href="#" data-reveal-id="siteModal">About Site</a></li>
     </ul>
   </div>
 </header>
@@ -76,7 +77,7 @@
         </ul><br/>
         <div id="close-projects">
           <a href="javascript:hideDiv('projects-wrapper');javascript:hideDiv('close-projects')">
-            <h1>Close Projects</h1>
+            <h1 style="color:#c0392b">Close Projects</h1>
           </a>
         </div>
       </div>
@@ -95,7 +96,21 @@
      time for me to indulge my first passion in life.</p>
    <p>So if you're needing to bring on a passionate Software/Web Developer with
      practical business experience, please contact me.</p>
+   <p>You can learn more about me at my
+     <a href="me.html" target="blank">Personal Website</a>.</p>
    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="siteModal" class="reveal-modal">
+  <p>This website, the associated Blog, and my personal site were all created by
+    myself using Ruby on Rails. You can see the code and its history at its
+    <a href="https://github.com/EricDavidEpperson/me" target="blank">Github repo</a>.</p>
+  <p>The backround photo is of the St. Louis Gateway Arch, taken by myself in 2004, from
+    the north leg, facing south. I was quite happy with the result (I grew up in
+    St. Louis, MO).</p>
+  <p>Copyright (c) 2014 Eric D. Epperson. This site and its content are covered by
+    the MIT License to be used and abused, if your'e into that sort of thing.</p>
+  <a class="close-reveal-modal">&#215;</a>
 </div>
 
 <div id="projects-wrapper">

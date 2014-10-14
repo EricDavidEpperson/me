@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   get '/construction', to:'me#construction'
   get 'me/index'
+  get '/me', to:'me#index'
 
 end

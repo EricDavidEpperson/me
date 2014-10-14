@@ -1,0 +1,23 @@
+<div id="projects" class="info">
+  <a href="javascript:hideDiv('projects');" id="close_projects"></a>
+  <div style="overflow: scroll;height: 25rem;" id="overflow">
+    <h1>My Projects</h1>
+    <h4>Check back here often to see what I am working on.</h4>
+    <% @projects.each do |project| %>
+      <div class="project">
+        <div class="screen_shot">
+          <a href="<%= project.url %>" target="blank">
+            <img src="<%= project.screen_shot %>"</a>
+        </div>
+        <a href="<%= project.url %>" target="blank"><h1><%= project.title %></h1></a>
+        <p><%= project.about %></p>
+        <h5>Technologies Used: <%= project.technologies %></h5>
+        <% if user_signed_in? %>
+          <p><%= link_to "Edit", edit_project_path(project) %> |
+            <%= link_to "Delete", project_path(project), method: :delete, "data-confirm"=>"Are you sure?" %></p>
+        <% end %>
+      </div>
+    <%end%>
+  </div>
+  <div id="down_arrow"><img src="http://s25.postimg.org/kxoy3o10r/gray_arrow_30_x_19.png"></div>
+</div>
