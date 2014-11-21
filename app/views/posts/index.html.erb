@@ -25,6 +25,20 @@
   <h5>Code Padawan</h5>
 </div>
 
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3>A Note on Content</h3>
+      <p>I've recently decided to implement a "tagging" system to help filter through my blog posts.
+      I feel this will be a good system for visitors to this site to be able to more efficiently sort
+      through exactly which content they want to see here. For potential employers it will make it easier
+      for them to see my work thought process. For family and friends who aren't into all the technical
+      stuff it makes it easier for them to see my posts about personal and family stuff without hitting a
+      wall of text on Classes vs. Modules or why Ruby is better than Perl, etc.</p>
+    </div>
+  </div>
+</div>
+
 <% @posts.order('created_at').each do |post| %>
   <div class="col-md-6 col-md-offset-3">
     <div class="panel panel-default">

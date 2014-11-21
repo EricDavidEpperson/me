@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930061114) do
+ActiveRecord::Schema.define(version: 20141121190722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blog_tags", force: true do |t|
+    t.integer  "post_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blog_tags", ["post_id"], name: "index_blog_tags_on_post_id", using: :btree
+  add_index "blog_tags", ["tag_id"], name: "index_blog_tags_on_tag_id", using: :btree
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -29,6 +39,12 @@ ActiveRecord::Schema.define(version: 20140930061114) do
     t.string   "technologies"
     t.string   "screen_shot"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags", force: true do |t|
+    t.string   "tags"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
